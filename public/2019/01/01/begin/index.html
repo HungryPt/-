@@ -2,23 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Namesilo + CloudFlare配置Https服务 - RuLinZi&#39;s Blog</title>
+<title>感谢 - RuLinZi&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="前言 搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题">
-<meta name="keywords" content="server">
+    <meta name="description" content="感谢crossoverjie,yemengying两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法,开始记录自己用到的一些技术和生活。">
+<meta name="keywords" content="life">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Namesilo + CloudFlare配置Https服务">
-<meta property="og:url" content="http://yoursite.com/2019/01/01/servers/index.html">
+<meta property="og:title" content="感谢">
+<meta property="og:url" content="http://yoursite.com/2019/01/01/begin/index.html">
 <meta property="og:site_name" content="RuLinZi&#39;s Blog">
-<meta property="og:description" content="前言 搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题">
+<meta property="og:description" content="感谢crossoverjie,yemengying两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法,开始记录自己用到的一些技术和生活。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-13T02:10:07.462Z">
+<meta property="og:updated_time" content="2019-02-15T01:48:49.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Namesilo + CloudFlare配置Https服务">
-<meta name="twitter:description" content="前言 搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题">
+<meta name="twitter:title" content="感谢">
+<meta name="twitter:description" content="感谢crossoverjie,yemengying两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法,开始记录自己用到的一些技术和生活。">
 
 
 
@@ -90,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Namesilo + CloudFlare配置Https服务" height="28">
+                <img src="/images/logo.png" alt="感谢" height="28">
             
             </a>
         </div>
@@ -130,7 +130,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/pic/2.jpg" alt="Namesilo + CloudFlare配置Https服务">
+            <img class="thumbnail" src="/pic/1.jpg" alt="感谢">
         </span>
     </div>
     
@@ -144,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 403 个字)
+                    1 分钟 读完 (大约 116 个字)
                 </span>
                 
                 
@@ -153,27 +153,15 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Namesilo + CloudFlare配置Https服务
+                感谢
             
         </h1>
         <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
-<p>搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题</p>
+            <hr>
+<p>感谢<a href="https://crossoverjie.top/" target="_blank" rel="noopener">crossoverjie</a>,<a href="https://yemengying.com/" target="_blank" rel="noopener">yemengying</a>两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法,开始记录自己用到的一些技术和生活。</p>
 <hr>
 <a id="more"></a>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><hr>
-<p> 为了便于记忆简单，人们采用域名的方式代替ip，由此产生了域名解析。类型:A ,AAAA , CNAME , MX , TXT/SPF , SRV , CAA记录解析。</p>
-<blockquote>
-<ul>
-<li>A记录解析：A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的web server上。同时也可以设置您域名的二级域名</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>CNAME记录：别名记录。这种记录允许您将多个名字映射到另外一个域名。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为“host.mydomain.com”（A记录）。它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。这两个别名的全称就<br><a href="http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。" target="_blank" rel="noopener">http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。</a></li>
-</ul>
-</blockquote>
-<h2 id="SSL"><a href="#SSL" class="headerlink" title="SSL"></a>SSL</h2><p>cloudflare</p>
+<!-- 采用VUE编写了整个博客页面，后台使用SpringBoot -->
 <style>
 hr{
     margin: 40px 0;
@@ -197,7 +185,7 @@ p{
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/server/">server</a>
+                    <a class="has-link-grey -link" href="/tags/life/">life</a>
                 </div>
             </div>
         </div>
@@ -244,9 +232,9 @@ p{
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/02/11/begin/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/02/11/servers/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">感谢</span>
+                <span class="level-item">Namesilo + CloudFlare配置Https服务</span>
             </a>
         </div>
         
@@ -262,8 +250,8 @@ p{
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/01/01/servers/';
-        this.page.identifier = 'Namesilo + CloudFlare配置Https服务';
+        this.page.url = 'http://yoursite.com/2019/01/01/begin/';
+        this.page.identifier = '感谢';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -322,7 +310,7 @@ p{
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
@@ -361,7 +349,7 @@ p{
                 
             </a>
             
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="https://weibo.com/u/1847633511">
+            <a class="level-item button is-white is-marginless" target="_blank" title="Weibo" href="https://weibo.com/u/1847633511">
                 
                 <i class="fab fa-weibo"></i>
                 
@@ -428,7 +416,7 @@ p{
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
+        <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/server/" style="font-size: 20px;">server</a>
     </div>
 </div>
 
@@ -445,16 +433,16 @@ p{
         
         <article class="media">
             
-            <a href="/2019/02/11/begin/" class="media-left">
+            <a href="/2019/02/15/devops/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/1.jpg" alt="感谢">
+                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
-                    <a href="/2019/02/11/begin/" class="has-link-black-ter is-size-6">感谢</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-14T16:00:00.000Z">2019-02-15</time></div>
+                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -464,7 +452,7 @@ p{
         
         <article class="media">
             
-            <a href="/2019/01/01/servers/" class="media-left">
+            <a href="/2019/02/11/servers/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/pic/2.jpg" alt="Namesilo + CloudFlare配置Https服务">
                 </p>
@@ -472,8 +460,27 @@ p{
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
+                    <a href="/2019/02/11/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/01/begin/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/pic/1.jpg" alt="感谢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-01T06:33:32.000Z">2019-01-01</time></div>
-                    <a href="/2019/01/01/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <a href="/2019/01/01/begin/" class="has-link-black-ter is-size-6">感谢</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -499,7 +506,7 @@ p{
                     <span class="level-item">二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -538,7 +545,7 @@ p{
                 <div class="control">
                     <a class="tags has-addons" href="/tags/server/">
                         <span class="tag">server</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -567,16 +574,16 @@ p{
         
         <article class="media">
             
-            <a href="/2019/02/11/begin/" class="media-left">
+            <a href="/2019/02/15/devops/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/1.jpg" alt="感谢">
+                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
-                    <a href="/2019/02/11/begin/" class="has-link-black-ter is-size-6">感谢</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-14T16:00:00.000Z">2019-02-15</time></div>
+                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -586,7 +593,7 @@ p{
         
         <article class="media">
             
-            <a href="/2019/01/01/servers/" class="media-left">
+            <a href="/2019/02/11/servers/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/pic/2.jpg" alt="Namesilo + CloudFlare配置Https服务">
                 </p>
@@ -594,8 +601,27 @@ p{
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
+                    <a href="/2019/02/11/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/01/begin/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/pic/1.jpg" alt="感谢">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-01T06:33:32.000Z">2019-01-01</time></div>
-                    <a href="/2019/01/01/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <a href="/2019/01/01/begin/" class="has-link-black-ter is-size-6">感谢</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -621,7 +647,7 @@ p{
                     <span class="level-item">二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -660,7 +686,7 @@ p{
                 <div class="control">
                     <a class="tags has-addons" href="/tags/server/">
                         <span class="tag">server</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -681,7 +707,7 @@ p{
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <!-- <img src="/images/logo.png" alt="Namesilo + CloudFlare配置Https服务" height="28"> -->
+                    <!-- <img src="/images/logo.png" alt="感谢" height="28"> -->
                 
                 </a>
                 <p class="is-size-7">
