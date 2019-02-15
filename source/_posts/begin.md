@@ -1,6 +1,6 @@
 ---
 title: 感谢
-date: 2019-02-11
+date: 2019-01-01 14:33:32
 tags: life
 thumbnail: /pic/1.jpg
 comments: true
@@ -9,14 +9,13 @@ disqusId: 感谢
 
 
 ***
-感谢[crossoverjie](https://crossoverjie.top/),[yemengying](https://yemengying.com/)两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法。
+感谢[crossoverjie](https://crossoverjie.top/),[yemengying](https://yemengying.com/)两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法,开始记录自己用到的一些技术和生活。
 ***
 <!-- more -->
-## 过程
+
   
 <!-- 采用VUE编写了整个博客页面，后台使用SpringBoot -->
 
-## 结束语
 
 
 
