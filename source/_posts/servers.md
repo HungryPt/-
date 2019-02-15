@@ -17,7 +17,7 @@ disqusId: Namesilo + CloudFlare配置Https服务
 
 ---
 
-搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题
+搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.
 
 
  
