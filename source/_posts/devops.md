@@ -1,5 +1,5 @@
 ---
-title: GitHub + Jenkins + Docker 自动构建
+title: GitHub + Jenkins + Docker 自动构建之Jenkins
 categories: 
 tags: server
 copyright: true
