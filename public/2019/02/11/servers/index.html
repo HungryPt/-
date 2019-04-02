@@ -7,18 +7,18 @@
 
 
 
-    <meta name="description" content="前言 搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.">
+    <meta name="description" content="搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.">
 <meta name="keywords" content="server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Namesilo + CloudFlare配置Https服务">
 <meta property="og:url" content="http://yoursite.com/2019/02/11/servers/index.html">
 <meta property="og:site_name" content="RuLinZi&#39;s Blog">
-<meta property="og:description" content="前言 搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.">
+<meta property="og:description" content="搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-15T08:27:54.439Z">
+<meta property="og:updated_time" content="2019-02-28T08:58:17.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Namesilo + CloudFlare配置Https服务">
-<meta name="twitter:description" content="前言 搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.">
+<meta name="twitter:description" content="搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.">
 
 
 
@@ -144,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 404 个字)
+                    3 分钟 读完 (大约 421 个字)
                 </span>
                 
                 
@@ -157,12 +157,12 @@
             
         </h1>
         <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+            <hr>
 <p>搭建博客过程中我在NameSilo上购买了域名自己人生当中的第一个域名（rulinzi.com），然后将域名解析到我的服务器ip（配置解析后有延迟，我的大概只过了几分钟就生效了），然后采用CloudFlare免费上了Https，记录一下遇到的问题.</p>
 <hr>
 <a id="more"></a>
-<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><hr>
-<p>NameSilo<br>&lt;!–<br> 为了便于记忆简单，人们采用域名的方式代替ip，由此产生了域名解析。类型:A ,AAAA , CNAME , MX , TXT/SPF , SRV , CAA记录解析。</p>
+<h2 id="域名-NameSilo"><a href="#域名-NameSilo" class="headerlink" title="域名(NameSilo)"></a>域名(NameSilo)</h2><hr>
+<p> 为了便于记忆简单，人们采用域名的方式代替ip，由此产生了域名解析。类型:A ,AAAA , CNAME , MX , TXT/SPF , SRV , CAA记录解析。</p>
 <blockquote>
 <ul>
 <li>A记录解析：A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的web server上。同时也可以设置您域名的二级域名</li>
@@ -170,10 +170,11 @@
 </blockquote>
 <blockquote>
 <ul>
-<li>CNAME记录：别名记录。这种记录允许您将多个名字映射到另外一个域名。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为“host.mydomain.com”（A记录）。它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。这两个别名的全称就<br><a href="http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。" target="_blank" rel="noopener">http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。</a> –&gt;</li>
+<li>CNAME记录：别名记录。这种记录允许您将多个名字映射到另外一个域名。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为“host.mydomain.com”（A记录）。它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。这两个别名的全称就<br><a href="http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。" target="_blank" rel="noopener">http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。</a> </li>
 </ul>
 </blockquote>
-<h2 id="SSL"><a href="#SSL" class="headerlink" title="SSL"></a>SSL</h2><p>cloudflare</p>
+<p><a href="">关于如何在NameSilo配置域名</a></p>
+<h2 id="SSL-cloudflare"><a href="#SSL-cloudflare" class="headerlink" title="SSL(cloudflare)"></a>SSL(cloudflare)</h2><p><a href="">关于如何使用cloudflare加SSL</a></p>
 <style>
 hr{
     margin: 40px 0;
@@ -246,14 +247,14 @@ p{
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/2019/02/15/devops/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">GitHub + Jenkins + Docker 自动构建（一）</span>
+                <span class="level-item">GitHub + Jenkins + Docker 自动构建</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/01/01/begin/">
-                <span class="level-item">感谢</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/02/11/kurento/">
+                <span class="level-item">Kurento</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -329,7 +330,7 @@ p{
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
@@ -349,7 +350,7 @@ p{
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        4
                     </p>
                 </div>
             </div>
@@ -435,7 +436,7 @@ p{
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/server/" style="font-size: 20px;">server</a>
+        <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Thanks/" style="font-size: 10px;">Thanks</a> <a href="/tags/WebRTC/" style="font-size: 10px;">WebRTC</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
     </div>
 </div>
 
@@ -454,14 +455,14 @@ p{
             
             <a href="/2019/02/15/devops/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建（一）">
+                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-14T16:00:00.000Z">2019-02-15</time></div>
-                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建（一）</a>
+                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -481,6 +482,25 @@ p{
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
                     <a href="/2019/02/11/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/11/kurento/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/pic/2.jpg" alt="Kurento">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
+                    <a href="/2019/02/11/kurento/" class="has-link-black-ter is-size-6">Kurento</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -525,7 +545,7 @@ p{
                     <span class="level-item">二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -555,8 +575,22 @@ p{
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/life/">
-                        <span class="tag">life</span>
+                    <a class="tags has-addons" href="/tags/DevOps/">
+                        <span class="tag">DevOps</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Thanks/">
+                        <span class="tag">Thanks</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/WebRTC/">
+                        <span class="tag">WebRTC</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -564,7 +598,7 @@ p{
                 <div class="control">
                     <a class="tags has-addons" href="/tags/server/">
                         <span class="tag">server</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -595,14 +629,14 @@ p{
             
             <a href="/2019/02/15/devops/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建（一）">
+                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-14T16:00:00.000Z">2019-02-15</time></div>
-                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建（一）</a>
+                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -622,6 +656,25 @@ p{
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
                     <a href="/2019/02/11/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/11/kurento/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/pic/2.jpg" alt="Kurento">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
+                    <a href="/2019/02/11/kurento/" class="has-link-black-ter is-size-6">Kurento</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -666,7 +719,7 @@ p{
                     <span class="level-item">二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -696,8 +749,22 @@ p{
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/life/">
-                        <span class="tag">life</span>
+                    <a class="tags has-addons" href="/tags/DevOps/">
+                        <span class="tag">DevOps</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Thanks/">
+                        <span class="tag">Thanks</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/WebRTC/">
+                        <span class="tag">WebRTC</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -705,7 +772,7 @@ p{
                 <div class="control">
                     <a class="tags has-addons" href="/tags/server/">
                         <span class="tag">server</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
