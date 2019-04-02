@@ -12,14 +12,17 @@ disqusId: Kurento简介
 
 ---
 
+Kurento是一个WebRTC媒体服务器，同时提供了一系列的客户端API，可以简化供浏览器、移动平台使用的视频类应用程序的开发。
+
+---
+<!-- more -->
+
 Kurento是一个WebRTC媒体服务器，同时提供了一系列的客户端API，可以简化供浏览器、移动平台使用的视频类应用程序的开发。Kurento支持：
+
 群组通信（group communications）
 媒体流的转码（transcoding）、录制（recording）、广播（broadcasting）、路由（routing）
 高级媒体处理特性，包括：机器视觉（CV）、视频索引、增强现实（AR）、语音分析
 Kurento的模块化架构使其与第三方媒体处理算法 —— 语音识别、人脸识别 —— 很容易集成。
-
----
-<!-- more -->
 
 ### 架构
 
@@ -106,7 +109,7 @@ Kurento Protocol是一个网络协议，通过WebSocket暴露KMS的特性。
 
 Kurento API是对上述协议的OO封装，通过此API能够创建媒体元素和管线。Kurento提供了API的Java、JavaScript绑定。
 
-###客户端
+### 客户端
 
 Kurento提供了Java、JavaScript（包括浏览器和Node.js）的客户端库，通过这些库你可以控制媒体服务器。对于其它编程语言，可以使用 Kurento Protocol协议（基于WebSocket/JSON-RPC）。
 
