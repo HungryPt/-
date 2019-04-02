@@ -1,7 +1,7 @@
 ---
 title: 感谢
 date: 2019-01-01 14:33:32
-tags: life
+tags: Thanks
 thumbnail: /pic/1.jpg
 comments: true
 disqusId: 感谢

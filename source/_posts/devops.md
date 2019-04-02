@@ -1,7 +1,7 @@
 ---
 title: GitHub + Jenkins + Docker 自动构建
 categories: 
-tags: server
+tags: DevOps
 copyright: true
 comments: true
 description: 
