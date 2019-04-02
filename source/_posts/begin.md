@@ -8,9 +8,12 @@ disqusId: 感谢
 ---
 
 
-***
+---
+
 感谢[crossoverjie](https://crossoverjie.top/),[yemengying](https://yemengying.com/)两位大佬，无意间看到他们的Blog萌生了自己搭建一套自己博客的想法,开始记录自己用到的一些技术和生活。
-***
+
+---
+
 <!-- more -->
 
   
