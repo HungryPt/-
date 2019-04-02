@@ -2,22 +2,28 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>aboutME - RuLinZi&#39;s Blog</title>
+<title>Kurento简介 - RuLinZi&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="haahhahahah">
-<meta property="og:type" content="website">
-<meta property="og:title" content="aboutME">
-<meta property="og:url" content="http://yoursite.com/aboutME/index.html">
+    <meta name="description" content="Kurento是一个WebRTC媒体服务器，同时提供了一系列的客户端API，可以简化供浏览器、移动平台使用的视频类应用程序的开发。Kurento支持：群组通信（group communications）媒体流的转码（transcoding）、录制（recording）、广播（broadcasting）、路由（routing）高级媒体处理特性，包括：机器视觉（CV）、视频索引、增强现实（AR）、语">
+<meta name="keywords" content="WebRTC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kurento简介">
+<meta property="og:url" content="http://yoursite.com/2019/04/02/kurento/index.html">
 <meta property="og:site_name" content="RuLinZi&#39;s Blog">
-<meta property="og:description" content="haahhahahah">
+<meta property="og:description" content="Kurento是一个WebRTC媒体服务器，同时提供了一系列的客户端API，可以简化供浏览器、移动平台使用的视频类应用程序的开发。Kurento支持：群组通信（group communications）媒体流的转码（transcoding）、录制（recording）、广播（broadcasting）、路由（routing）高级媒体处理特性，包括：机器视觉（CV）、视频索引、增强现实（AR）、语">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-12T08:21:35.913Z">
+<meta property="og:image" content="https://gmem.site/wp-content/uploads/2017/08/kurentoapp-architecture.png">
+<meta property="og:image" content="https://gmem.site/wp-content/uploads/2017/08/kurentoapp-generic_interactions.png">
+<meta property="og:image" content="https://gmem.site/wp-content/uploads/2017/08/kurento-webrtc-session.png">
+<meta property="og:image" content="https://gmem.site/wp-content/uploads/2017/08/kurento-basic-toolbox.png">
+<meta property="og:updated_time" content="2019-04-02T02:56:35.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="aboutME">
-<meta name="twitter:description" content="haahhahahah">
+<meta name="twitter:title" content="Kurento简介">
+<meta name="twitter:description" content="Kurento是一个WebRTC媒体服务器，同时提供了一系列的客户端API，可以简化供浏览器、移动平台使用的视频类应用程序的开发。Kurento支持：群组通信（group communications）媒体流的转码（transcoding）、录制（recording）、广播（broadcasting）、路由（routing）高级媒体处理特性，包括：机器视觉（CV）、视频索引、增强现实（AR）、语">
+<meta name="twitter:image" content="https://gmem.site/wp-content/uploads/2017/08/kurentoapp-architecture.png">
 
 
 
@@ -89,7 +95,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="aboutME" height="28">
+                <img src="/images/logo.png" alt="Kurento简介" height="28">
             
             </a>
         </div>
@@ -127,16 +133,129 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/pic/2.jpg" alt="Kurento简介">
+        </span>
+    </div>
+    
     <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-01T16:00:00.000Z">2019-04-02</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 分钟 读完 (大约 1825 个字)
+                </span>
+                
+                
+            </div>
+        </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                aboutME
+                Kurento简介
             
         </h1>
         <div class="content">
-            <p>haahhahahah</p>
+            <hr>
+<p>Kurento是一个WebRTC媒体服务器，同时提供了一系列的客户端API，可以简化供浏览器、移动平台使用的视频类应用程序的开发。Kurento支持：<br>群组通信（group communications）<br>媒体流的转码（transcoding）、录制（recording）、广播（broadcasting）、路由（routing）<br>高级媒体处理特性，包括：机器视觉（CV）、视频索引、增强现实（AR）、语音分析<br>Kurento的模块化架构使其与第三方媒体处理算法 —— 语音识别、人脸识别 —— 很容易集成。</p>
+<hr>
+<a id="more"></a>
+<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p>和大部分多媒体通信技术一样，Kurento应用的整体架构包含两个层（layer）或者叫平面（plane）：</p>
+<ul>
+<li><p>信号平面（Signaling Plane）：负责通信的管理，例如媒体协商、QoS、呼叫建立、身份验证等</p>
+</li>
+<li><p>媒体平面（Media Plane）：负责媒体传输、编解码等</p>
+</li>
+</ul>
+<p>典型Kurento应用的整体架构如下图：</p>
+<p><img src="https://gmem.site/wp-content/uploads/2017/08/kurentoapp-architecture.png" alt="avatar"></p>
+<h3 id="分层视角"><a href="#分层视角" class="headerlink" title="分层视角"></a>分层视角</h3><p>按分层的方式来划分，Kurento应用可以分为三层（类似于典型的Web应用）：</p>
+<ol>
+<li>展现层 —— 浏览器、移动应用、其它媒体源等应用客户端：<ol>
+<li>基于任意协议和应用逻辑层通信，发起信号处理</li>
+<li>基于RTP/HTTP/WebRTC协议和KMS通信：<ol>
+<li>通过KMS的输入端点，传输媒体流到KMS</li>
+<li>通过KMS的输出端点，从KMS获得媒体流</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>应用逻辑层——应用服务器负责信号平面：<ol>
+<li>基于WebSocket/HTTP/REST/SIP等方式和应用客户端通信，进行信号处理</li>
+<li>内嵌Kurento Client，基于Kurento Protocol与KMS通信，管理媒体元素/媒体管线</li>
+</ol>
+</li>
+<li>服务层——KMS负责媒体平面，可以对输入流进行各种处理，并产生输出流</li>
+</ol>
+<h3 id="层之间的交互"><a href="#层之间的交互" class="headerlink" title="层之间的交互"></a>层之间的交互</h3><p>媒体协商（信号处理）阶段：</p>
+<ol>
+<li>客户端首先向应服务器请求某种媒体特性（例如请求一个九画面视频监控流、请求发布自己的SDP）。这块WebRTC没有规定，可以基于任何协议（HTTP/WS/SIP）实现</li>
+<li>应用服务器接收到请求后，执行特定的服务器端逻辑，例如AAA（认证授权审计）、CDR生成等</li>
+<li>应用服务器处理请求，并命令KMS实例化适当的媒体元素、构建媒体流（例如从多个RTSP源混合出九画面）</li>
+<li>媒体流构建完毕后，KMS应答应用服务器，后者应答客户端，告知其如何获取媒体服务</li>
+</ol>
+<p>媒体交换阶段：</p>
+<ol>
+<li>客户端利用协商阶段收集的信息，向KMS发起请求（例如向目标端口发起UDP请求，获取九画面视频监控流）</li>
+</ol>
+<p>下图是交互的序列示意，注意先后顺序：<br><img src="https://gmem.site/wp-content/uploads/2017/08/kurentoapp-generic_interactions.png" alt="avatar"></p>
+<h3 id="WebRTC应用的例子"><a href="#WebRTC应用的例子" class="headerlink" title="WebRTC应用的例子"></a>WebRTC应用的例子</h3><p>Kurento允许基于WebRTC建立浏览器和KMS之间的实时多媒体会话：</p>
+<ol>
+<li>客户端基于SDP来发布自己的媒体特性，请求发送给应用服务器</li>
+<li>应用服务器根据SDP来创建合适的WebRTC端点，并请求KMS生成一个响应SDP</li>
+<li>应用服务器获得响应SDP后，将其返回给客户端</li>
+<li>由于双方都知道对方的SDP了，客户端和KMS可以进行媒体交换了</li>
+</ol>
+<p>下图是交互的序列示意：</p>
+<p><img src="https://gmem.site/wp-content/uploads/2017/08/kurento-webrtc-session.png" alt="avatar"></p>
+<p>Kurento也可以作为一个媒体代理，让浏览器之间建立直接的媒体交换。交互序列仍然如上图，仅仅是KMS返回的SDP不同</p>
+<h3 id="媒体服务器"><a href="#媒体服务器" class="headerlink" title="媒体服务器"></a>媒体服务器</h3><p>WebRTC让浏览器能够进行实时的点对点通信（在没有服务器的情况下）。但是要想实现群组通信、媒体流录制、媒体广播、转码等高级特性，没有媒体服务器是很难实现的。</p>
+<p>Kurento的核心是一个媒体服务器（Kurento Media Server，KMS），负责媒体的传输、处理、加载、录制，主要基于 GStreamer实现。此媒体服务器的特性包括：</p>
+<ol>
+<li>网络流协议处理，包括HTTP、RTP、WebRTC</li>
+<li>支持媒体混合（mixing）、路由和分发的群组通信（MCU、SFU功能）</li>
+<li>对机器视觉和增强现实过滤器的一般性支持</li>
+<li>媒体存储支持，支持对WebM、MP4进行录像操作，可以播放任何GStreamer支持的视频格式</li>
+<li>对于GStreamer支持的编码格式，可以进行任意的转码，例如VP8, H.264, H.263, AMR, OPUS, Speex, G.711</li>
+</ol>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>KMS基于模块化的设计，模块主要分为三类：</p>
+<ol>
+<li>核心（kms-core）</li>
+<li>媒体元素（kms-elements）</li>
+<li>过滤器（kms-filters）</li>
+</ol>
+<p>其它增强KMS的模块，例如kms-crowddetector, kms-pointerdetector, kms-chroma, kms-platedetector KMS允许用户扩展自己的模块。</p>
+<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>Kurento Protocol是一个网络协议，通过WebSocket暴露KMS的特性。</p>
+<p>Kurento API是对上述协议的OO封装，通过此API能够创建媒体元素和管线。Kurento提供了API的Java、JavaScript绑定。</p>
+<p>###客户端</p>
+<p>Kurento提供了Java、JavaScript（包括浏览器和Node.js）的客户端库，通过这些库你可以控制媒体服务器。对于其它编程语言，可以使用 Kurento Protocol协议（基于WebSocket/JSON-RPC）。</p>
+<p>Kurento客户端API基于所谓媒体元素（Media Element）的概念。一个每天元素持有一种特定的媒体特性。例如：</p>
+<ol>
+<li>媒体元素WebRtcEndpoint的特性是，接收WebRTC媒体流</li>
+<li>媒体元素RecorderEndpoint的特性是，将接收到的媒体流录制到文件系统</li>
+<li>媒体元素FaceOverlayFilter则能够检测人脸，在其上方显示一个特定的图像<br>开箱即用的媒体元素如下图：</li>
+</ol>
+<p><img src="https://gmem.site/wp-content/uploads/2017/08/kurento-basic-toolbox.png" alt="avatar"></p>
+<p>从开发者角度来说，操控媒体元素就好像搭积木。 你只需要按照期望的拓扑结构把它们连接起来就可以了。一系列连接起来的媒体元素称为媒体管线（Media Pipeline）。只有一个管线内部的媒体元素才能相互通信</p>
+<p>当创建管道时，开发者需要明确希望使用到的特性，以及媒体连接（connectivity） 产生媒体的元素和消费媒体的元素之间的连接：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sourceMediaElement.connect(sinkMediaElement);</span><br><span class="line">// 例如：客户端接收WebRTC流并录制到媒体服务器的文件系统</span><br><span class="line">webRtcEndpoint.connect(recorderEndpoint);</span><br></pre></td></tr></table></figure>
+<h3 id="Web客户端"><a href="#Web客户端" class="headerlink" title="Web客户端"></a>Web客户端</h3><p>为了简化浏览器客户端的WebRTC流处理，Kurento提供了工具WebRtcPeer，你仍然可以使用WebRTC的标准API，以及连接到WebRtcEndpoint。</p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/WebRTC/">WebRTC</a>
+                </div>
+            </div>
         </div>
         
         
@@ -177,6 +296,20 @@
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/02/15/devops/">
+                <span class="level-item">GitHub + Jenkins + Docker 自动构建</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
 
 
 <div class="card">
@@ -185,8 +318,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/aboutME/index.html';
-        this.page.identifier = 'aboutME/index.html';
+        this.page.url = 'http://yoursite.com/2019/04/02/kurento/';
+        this.page.identifier = 'Kurento简介';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -730,7 +863,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <!-- <img src="/images/logo.png" alt="aboutME" height="28"> -->
+                    <!-- <img src="/images/logo.png" alt="Kurento简介" height="28"> -->
                 
                 </a>
                 <p class="is-size-7">
