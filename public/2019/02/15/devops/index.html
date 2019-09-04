@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>GitHub + Jenkins + Docker 自动构建 - RuLinZi&#39;s Blog</title>
+<title>Git + Jenkins + Docker 自动构建 - RuLinZi&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,15 +10,21 @@
     <meta name="description" content="由于每次更新博客部署起来太麻烦，心想可以自己搭建一套属于自己的devop环境，刚好之前也有接触过，但是没有自己亲手搭建，刚好自己有这个需求。">
 <meta name="keywords" content="DevOps">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub + Jenkins + Docker 自动构建">
+<meta property="og:title" content="Git + Jenkins + Docker 自动构建">
 <meta property="og:url" content="http://yoursite.com/2019/02/15/devops/index.html">
 <meta property="og:site_name" content="RuLinZi&#39;s Blog">
 <meta property="og:description" content="由于每次更新博客部署起来太麻烦，心想可以自己搭建一套属于自己的devop环境，刚好之前也有接触过，但是没有自己亲手搭建，刚好自己有这个需求。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T02:23:38.410Z">
+<meta property="og:image" content="http://yoursite.com/pic/1562573310.jpg">
+<meta property="og:image" content="http://yoursite.com/pic/1234.png">
+<meta property="og:image" content="http://yoursite.com/pic/dd.png">
+<meta property="og:image" content="http://yoursite.com/pic/1551051-8ea42cdf1ecac92e.png">
+<meta property="og:image" content="http://yoursite.com/pic/wqe.png">
+<meta property="og:updated_time" content="2019-07-08T09:19:42.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GitHub + Jenkins + Docker 自动构建">
+<meta name="twitter:title" content="Git + Jenkins + Docker 自动构建">
 <meta name="twitter:description" content="由于每次更新博客部署起来太麻烦，心想可以自己搭建一套属于自己的devop环境，刚好之前也有接触过，但是没有自己亲手搭建，刚好自己有这个需求。">
+<meta name="twitter:image" content="http://yoursite.com/pic/1562573310.jpg">
 
 
 
@@ -90,7 +96,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="GitHub + Jenkins + Docker 自动构建" height="28">
+                <img src="/images/logo.png" alt="Git + Jenkins + Docker 自动构建" height="28">
             
             </a>
         </div>
@@ -130,7 +136,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
+            <img class="thumbnail" src="/pic/3.jpg" alt="Git + Jenkins + Docker 自动构建">
         </span>
     </div>
     
@@ -144,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 120 个字)
+                    6 分钟 读完 (大约 967 个字)
                 </span>
                 
                 
@@ -153,7 +159,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                GitHub + Jenkins + Docker 自动构建
+                Git + Jenkins + Docker 自动构建
             
         </h1>
         <div class="content">
@@ -161,7 +167,60 @@
 <p>由于每次更新博客部署起来太麻烦，心想可以自己搭建一套属于自己的devop环境，刚好之前也有接触过，但是没有自己亲手搭建，刚好自己有这个需求。</p>
 <hr>
 <a id="more"></a>
-<h3 id="什么是DEVOPS"><a href="#什么是DEVOPS" class="headerlink" title="什么是DEVOPS"></a>什么是DEVOPS</h3><h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><h3 id="Jenkins配置"><a href="#Jenkins配置" class="headerlink" title="Jenkins配置"></a>Jenkins配置</h3><h3 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h3><style>
+<h3 id="什么是DEVOPS"><a href="#什么是DEVOPS" class="headerlink" title="什么是DEVOPS"></a>什么是DEVOPS</h3><p>DevOps: Development和Operations的组合，是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠</p>
+<h3 id="1-Docker安装"><a href="#1-Docker安装" class="headerlink" title="1.Docker安装"></a>1.Docker安装</h3><p>Docker安装比较简单（win10建议是win10专业版）</p>
+<ul>
+<li><a href="https://docs.docker.com/docker-for-windows/install/" target="_blank" rel="noopener">windows安装</a></li>
+<li><a href="https://docs.docker.com/docker-for-mac/install/" target="_blank" rel="noopener">Mac安装</a></li>
+</ul>
+<h3 id="2-仓库配置"><a href="#2-仓库配置" class="headerlink" title="2.仓库配置"></a>2.仓库配置</h3><ul>
+<li>配置源码管理-&gt;Git，此处填写代码托管平台地址（GitHub ， Gitlab 等）和对应的Credentials</li>
+</ul>
+<h3 id="3-Jenkins配置"><a href="#3-Jenkins配置" class="headerlink" title="3.Jenkins配置"></a>3.Jenkins配置</h3><ul>
+<li>通过在Docker Hub中找到<a href="https://hub.docker.com/_/jenkins" target="_blank" rel="noopener">Jenkins</a>的镜像,并启动</li>
+</ul>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:8080 -p 50000:50000 -v /your/home:/var/jenkins_home jenkins</span><br></pre></td></tr></table></figure>
+<p>  <img src="/2019/02/15/devops/../../../../pic/1562573310.jpg" alt="运行Jenkins"></p>
+<ul>
+<li><p>设置账户后密码后登陆</p>
+<p><img src="/2019/02/15/devops/../../../../pic/1234.png" alt="登陆"></p>
+</li>
+<li><p><strong>安装需要的插件</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Maven Intergration plugin #用于构建maven项目的插件</span><br><span class="line">Checkstyle plugin #检测代码的格式是否规范的插件</span><br><span class="line">Findbugs plugin #对提交的代码静态检测，静态语法</span><br><span class="line">Deploy to Container Plugin #将项目部署到Tomcat中需要用到的插件 （或者其他容器）</span><br><span class="line">Publish over SSH plugin #需要部署项目到远程linux时需要到的插件</span><br><span class="line">Gogs plugin #使用web钩子推送时，必须下载此插件，不然就会报403错误</span><br><span class="line">Hudson SCP publisher plugin：拷贝部署文件到远程虚拟机</span><br><span class="line">Publish Over SSH：执行远程部署命令</span><br><span class="line">Environment Injector Plugin：注入变量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>系统设置-Publish over SSH</strong><br><img src="/2019/02/15/devops/../../../../pic/dd.png" alt="SSH配置"></p>
+<ul>
+<li>name：自定义</li>
+<li>Hostname:远程服务器的ip</li>
+<li>Usename:用户名</li>
+<li>Remote Directory：上传文件的路径</li>
+<li>密码需要勾选才会显示，然后填入。</li>
+<li>Port：端口根据实际情况配置。保存！</li>
+</ul>
+</li>
+<li><p><strong>配置-增加构建后操作步骤。</strong><br><img src="/2019/02/15/devops/../../../../pic/1551051-8ea42cdf1ecac92e.png" alt="SSH配置"></p>
+<ul>
+<li>Name:选择配置好的远程机器</li>
+<li>Source files： 默认位置是项目的工作目录，所以要写上需要远程传输的文件的相对地址。</li>
+<li>Remove prefix：去掉war包前面的文件夹</li>
+<li>Remote directory： 这个目录要传送war包到目标服务器的目录，系统设置里面的Remote Directory 拼接上此处的 - Remote directory 形成的目录才是 war包最终的上传目录。  </li>
+<li>立即构建 构建成功</li>
+</ul>
+</li>
+</ul>
+<p>  <img src="/2019/02/15/devops/../../../../pic/wqe.png" alt="点击立即构建"></p>
+<p>四、远程上传下载镜像</p>
+<ul>
+<li><p><strong>Exec command</strong><br>远程服务器上需要执行的脚本的位置。可以在该脚本中写部署启动脚本。</p>
+</li>
+<li><p>Execute shell中做好镜像后，不是在本机启动， 而是上传到镜像仓库。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line">dates=`date &quot;+%Y%m%d&quot;`</span><br><span class="line">projects=&quot;preview&quot;</span><br><span class="line">registry=&quot;192.168.22*.**:8088&quot;</span><br><span class="line">sudo  rm  -rf  /opt/product/preview/apps/preview/*</span><br><span class="line">sudo cp  -rf  /var/lib/jenkins/workspace/preview/WebContent/*  /opt/product/preview/apps/preview/</span><br><span class="line">sudo docker stop $projects  || true</span><br><span class="line">sudo docker rm -f $projects || true</span><br><span class="line">sudo docker rmi $registry/$projects:$dates || true</span><br><span class="line">sudo docker build -t $registry/$projects:$dates  /opt/product/preview</span><br><span class="line">#sudo docker run --name=$projects -d -ti -p 38001:8080 -v /opt/product/data:/opt/product/data -v /data/jdk:/data/jdk  $projects:$dates</span><br><span class="line">sudo docker push  $registry/$projects:$dates</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程机器运行脚本位置</p>
+</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Exec command：/opt/test/gaoyx/remote/preview/preview.sh</span><br><span class="line">脚本内容如下：</span><br><span class="line">#!/bin/bash</span><br><span class="line">dates=`date &quot;+%Y%m%d&quot;`</span><br><span class="line">projects=&quot;preview&quot;</span><br><span class="line">registry=&quot;192.168.22*.**:8088&quot;</span><br><span class="line"></span><br><span class="line">sudo docker stop $projects  || true</span><br><span class="line">sudo docker rm -f $projects || true</span><br><span class="line">sudo docker rmi  $registry/$projects:$dates || true</span><br><span class="line">sudo docker pull $registry/$projects:$dates</span><br><span class="line">sudo docker run --name=$projects --restart=always -d -ti -p 6801:8080 -v  /opt/product/dat</span><br></pre></td></tr></table></figure>
+<style>
 hr{
     margin: 40px 0;
     height: 3px;
@@ -316,7 +375,7 @@ p{
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -336,7 +395,7 @@ p{
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        6
                     </p>
                 </div>
             </div>
@@ -422,7 +481,7 @@ p{
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring-Boot</a> <a href="/tags/Thanks/" style="font-size: 10px;">Thanks</a> <a href="/tags/WebRTC/" style="font-size: 20px;">WebRTC</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
+        <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Java面试/" style="font-size: 10px;">Java面试</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring-Boot</a> <a href="/tags/Thanks/" style="font-size: 10px;">Thanks</a> <a href="/tags/WebRTC/" style="font-size: 20px;">WebRTC</a> <a href="/tags/server/" style="font-size: 10px;">server</a>
     </div>
 </div>
 
@@ -439,9 +498,28 @@ p{
         
         <article class="media">
             
+            <a href="/2019/06/06/interview/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/pic/pexels-photo-2346015.jpeg" alt="Java面试总结（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-05T16:00:00.000Z">2019-06-06</time></div>
+                    <a href="/2019/06/06/interview/" class="has-link-black-ter is-size-6">Java面试总结（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/05/08/spring-boot/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Spring-Boot">
+                    <img class="thumbnail" src="/pic/pexels-photo-773471.jpeg" alt="Spring-Boot">
                 </p>
             </a>
             
@@ -460,7 +538,7 @@ p{
             
             <a href="/2019/05/06/kurentoCustom/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Kurento自定义模块">
+                    <img class="thumbnail" src="/pic/pexels-photo-1252869.jpeg" alt="Kurento自定义模块">
                 </p>
             </a>
             
@@ -479,7 +557,7 @@ p{
             
             <a href="/2019/04/02/kurento/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Kurento简介">
+                    <img class="thumbnail" src="/pic/pexels-photo-2406454.jpeg" alt="Kurento简介">
                 </p>
             </a>
             
@@ -498,33 +576,14 @@ p{
             
             <a href="/2019/02/15/devops/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
+                    <img class="thumbnail" src="/pic/3.jpg" alt="Git + Jenkins + Docker 自动构建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-14T16:00:00.000Z">2019-02-15</time></div>
-                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/02/11/servers/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Namesilo + CloudFlare配置Https服务">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
-                    <a href="/2019/02/11/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">Git + Jenkins + Docker 自动构建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -543,6 +602,17 @@ p{
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/05/">
@@ -604,6 +674,13 @@ p{
                 <div class="control">
                     <a class="tags has-addons" href="/tags/DevOps/">
                         <span class="tag">DevOps</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java面试/">
+                        <span class="tag">Java面试</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -661,9 +738,28 @@ p{
         
         <article class="media">
             
+            <a href="/2019/06/06/interview/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/pic/pexels-photo-2346015.jpeg" alt="Java面试总结（一）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-05T16:00:00.000Z">2019-06-06</time></div>
+                    <a href="/2019/06/06/interview/" class="has-link-black-ter is-size-6">Java面试总结（一）</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/05/08/spring-boot/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Spring-Boot">
+                    <img class="thumbnail" src="/pic/pexels-photo-773471.jpeg" alt="Spring-Boot">
                 </p>
             </a>
             
@@ -682,7 +778,7 @@ p{
             
             <a href="/2019/05/06/kurentoCustom/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Kurento自定义模块">
+                    <img class="thumbnail" src="/pic/pexels-photo-1252869.jpeg" alt="Kurento自定义模块">
                 </p>
             </a>
             
@@ -701,7 +797,7 @@ p{
             
             <a href="/2019/04/02/kurento/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Kurento简介">
+                    <img class="thumbnail" src="/pic/pexels-photo-2406454.jpeg" alt="Kurento简介">
                 </p>
             </a>
             
@@ -720,33 +816,14 @@ p{
             
             <a href="/2019/02/15/devops/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/3.jpg" alt="GitHub + Jenkins + Docker 自动构建">
+                    <img class="thumbnail" src="/pic/3.jpg" alt="Git + Jenkins + Docker 自动构建">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-14T16:00:00.000Z">2019-02-15</time></div>
-                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">GitHub + Jenkins + Docker 自动构建</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/02/11/servers/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/pic/2.jpg" alt="Namesilo + CloudFlare配置Https服务">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-10T16:00:00.000Z">2019-02-11</time></div>
-                    <a href="/2019/02/11/servers/" class="has-link-black-ter is-size-6">Namesilo + CloudFlare配置Https服务</a>
+                    <a href="/2019/02/15/devops/" class="has-link-black-ter is-size-6">Git + Jenkins + Docker 自动构建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -765,6 +842,17 @@ p{
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">六月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/05/">
@@ -831,6 +919,13 @@ p{
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Java面试/">
+                        <span class="tag">Java面试</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Spring-Boot/">
                         <span class="tag">Spring-Boot</span>
                         <span class="tag is-grey">1</span>
@@ -875,7 +970,7 @@ p{
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <!-- <img src="/images/logo.png" alt="GitHub + Jenkins + Docker 自动构建" height="28"> -->
+                    <!-- <img src="/images/logo.png" alt="Git + Jenkins + Docker 自动构建" height="28"> -->
                 
                 </a>
                 <p class="is-size-7">

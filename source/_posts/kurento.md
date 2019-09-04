@@ -6,7 +6,7 @@ copyright: true
 comments: true
 description: 
 date: 2019-04-02
-thumbnail: /pic/2.jpg
+thumbnail: /pic/pexels-photo-2406454.jpeg
 disqusId: Kurento简介
 ---
 

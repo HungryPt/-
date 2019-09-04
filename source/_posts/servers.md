@@ -28,13 +28,13 @@ disqusId: Namesilo + CloudFlare配置Https服务
 >* CNAME记录：别名记录。这种记录允许您将多个名字映射到另外一个域名。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为“host.mydomain.com”（A记录）。它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。这两个别名的全称就
 http://www.mydomain.com/和mail.mydomain.com。实际上他们都指向host.mydomain.com。 
 
-[关于如何在NameSilo配置域名]()
+[关于如何在NameSilo配置域名](https://www.cnblogs.com/croso/p/5400890.html)
 
 
 ## SSL(cloudflare)
 
 
-[关于如何使用cloudflare加SSL]()
+[关于如何使用cloudflare加SSL](https://www.jianshu.com/p/24d3800f597a)
 
 
 
