@@ -17,7 +17,7 @@ disqusId: 感谢
 <!-- more -->
 
   
-<!-- 采用VUE编写了整个博客页面，后台使用SpringBoot -->
+采用VUE编写了整个博客页面，后台使用SpringBoot 
 
 
 
