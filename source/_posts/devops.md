@@ -29,9 +29,7 @@ Docker安装比较简单（win10建议是win10专业版）
 ### 2.仓库配置
 
 - 配置源码管理->Git，此处填写代码托管平台地址（GitHub ， Gitlab 等）和对应的Credentials
-- 配置源码管理->Git，此处填写代码托管平台地址（GitHub ， Gitlab 等）和对应的Credentials
-- 配置源码管理->Git，此处填写代码托管平台地址（GitHub ， Gitlab 等）和对应的Credentials
-- 配置源码管理->Git，此处填写代码托管平台地址（GitHub ， Gitlab 等）和对应的Credentials
+
 
 
 ### 3.Jenkins配置
